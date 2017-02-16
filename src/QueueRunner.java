@@ -65,7 +65,7 @@ public class QueueRunner extends JFrame
                 g2.drawString(timeLeft + "", res.width - 120+posTimer, 72);
 
                 g2.setFont(new Font("Calibri", Font.PLAIN, 22));
-                g2.drawString("door Johan Talboom", 0, res.height-10+posY);
+                g2.drawString("door Johan Talboom", 0, posY+110);
 
             }
         });

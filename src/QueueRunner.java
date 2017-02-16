@@ -54,15 +54,15 @@ public class QueueRunner extends JFrame
                 g2.setFont(new Font("Calibri", Font.PLAIN, 72));
 
                 g2.setColor(new Color(0.0f, 0.f, 0.0f, 0.5f));
-                g2.fill(new RoundRectangle2D.Double(0, res.height-40-72+posY, 700, 40+72, 10, 10));
+                g2.fill(new RoundRectangle2D.Double(0, posY, 700, 40+72, 10, 10));
                 g2.setColor(Color.white);
-                g2.drawString(title, 0, res.height-40+posY);
+                g2.drawString(title, 0, posY+72);
 
 
                 g2.setColor(new Color(0.0f, 0.f, 0.0f, 0.5f));
-                g2.fill(new RoundRectangle2D.Double(res.width -120+ posTimer, res.height-40-72, 120, 40+72, 10, 10));
+                g2.fill(new RoundRectangle2D.Double(res.width -120+ posTimer, 0, 120, 40+72, 10, 10));
                 g2.setColor(Color.white);
-                g2.drawString(timeLeft + "", res.width - 120+posTimer, res.height-40);
+                g2.drawString(timeLeft + "", res.width - 120+posTimer, 72);
 
                 g2.setFont(new Font("Calibri", Font.PLAIN, 22));
                 g2.drawString("door Johan Talboom", 0, res.height-10+posY);
@@ -96,7 +96,8 @@ public class QueueRunner extends JFrame
         getContentPane().setBackground(new Color(0,0,0,0.0f));
 
         setAlwaysOnTop(true);
-        setSize(res.width, res.height);
+        setSize(res.width, 120);
+        setLocation(0, res.height - getHeight());
         setVisible(true);
     }
 
